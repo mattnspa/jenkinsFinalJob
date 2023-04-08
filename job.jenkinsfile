@@ -12,6 +12,13 @@ pipeline {
                 echo 'Testing..'
             }
         }
+        stage('Using a library') {
+            steps {
+                script {
+                    nameOfFile.sayHello('mate')
+                }
+            }
+        }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
